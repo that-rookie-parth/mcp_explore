@@ -1,0 +1,9 @@
+[project]
+name = "local-mcp-engine"
+version = "0.1.0"
+description = "Setting up a local MCP Server to interact with local LLMs."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastmcp>=2.10.5",
+]
