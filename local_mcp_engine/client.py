@@ -3,7 +3,7 @@ import logging
 
 from fastmcp import Client
 
-client: Client[str] = Client("server.py")
+client = Client("http://localhost:8000/mcp")
 
 
 async def call_tool(name: str) -> None:
