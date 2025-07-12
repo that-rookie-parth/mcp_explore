@@ -3,12 +3,12 @@ import logging
 
 from fastmcp import Client
 
-from server import mcp
+client: Client[str] = Client("server.py")
 
 
 async def call_tool(name: str) -> None:
     logging.info("Tool Called!!")
-    async with Client(mcp) as client:
+    async with client:
         result = await client.call_tool(
             "greet",
             {
