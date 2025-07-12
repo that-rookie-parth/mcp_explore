@@ -46,7 +46,7 @@ class Database:
             )
             conn.commit()
 
-    def get_all_people(self) -> List[Tuple[Any]]:
+    def get_all_people(self) -> List[Any]:
         with self.get_connection() as conn:
             cursor = conn.execute(self.queries["get_all_people"])
             return cursor.fetchall()
