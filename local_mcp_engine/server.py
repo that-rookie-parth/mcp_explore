@@ -1,10 +1,16 @@
+import logging
+
 from fastmcp import FastMCP
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("fastmcp_server")
 
 mcp = FastMCP("My MCP Server")
 
 
 @mcp.tool
 def greet(name: str) -> str:
+    logger.info("greet() tool called")
     return f"Hello {name}!!"
 
 
