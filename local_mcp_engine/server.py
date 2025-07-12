@@ -8,9 +8,13 @@ def greet(name: str) -> str:
     return f"Hello {name}!!"
 
 
+app = mcp.http_app()
+
 if __name__ == "__main__":
-    mcp.run(
-        transport="http",
+    import uvicorn
+
+    uvicorn.run(
+        app,
         host="0.0.0.0",
         port=8000,
     )
