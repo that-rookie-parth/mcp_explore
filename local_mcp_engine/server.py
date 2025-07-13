@@ -36,9 +36,19 @@ def list_people() -> list[Any]:
     """
     Retrun the details about all the people stored in the db.
     """
-    logging.info("Fetching the details of all the people from the db")
+    logger.info("Fetching the details of all the people from the db")
     people: list[Any] = db.get_all_people()
     return people
+
+
+@mcp.tool
+def remove_person(id: int) -> str:
+    """
+    Remove the information about person from the db based on the id.
+    """
+    logger.info("Removing the information about a person from the db.")
+    db.remove_person(id)
+    return f"Record of {id} removed successfully from the db."
 
 
 app = mcp.http_app()
