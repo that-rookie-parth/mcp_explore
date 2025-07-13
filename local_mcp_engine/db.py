@@ -50,3 +50,13 @@ class Database:
         with self.get_connection() as conn:
             cursor = conn.execute(self.queries["get_all_people"])
             return cursor.fetchall()
+
+    def remove_person(self, id: int) -> None:
+        with self.get_connection() as conn:
+            cursor = conn.execute(
+                self.queries["remove_person"],
+                {
+                    "id": id,
+                },
+            )
+            conn.commit()
