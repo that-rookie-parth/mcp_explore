@@ -8,6 +8,7 @@ dependencies = [
     "fastmcp>=2.10.5",
     "ipykernel>=6.29.5",
     "langchain-mcp-adapters>=0.1.9",
+    "langchain-ollama>=0.3.4",
     "langchain[openai]>=0.3.26",
     "langgraph>=0.5.2",
     "nbstripout>=0.8.1",
