@@ -44,6 +44,13 @@ Start the server
 ```
 
 
+## Ollama
+
+Follow [these instructions](https://github.com/ollama/ollama?tab=readme-ov-file#ollama) to set up and run a local Ollama instance.
+
+**IMPORTANT**: Choose the model which supports the tool and agent calls.
+
+
 ## Features
 
 * Local MCP server built with **FastMCP**, run via **Uvicorn** for hot-reload development.
