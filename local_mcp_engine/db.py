@@ -1,13 +1,17 @@
 import re
 import sqlite3
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List
 
 DB_PATH = "demo.db"
 QUERY_FILE = "queries.sql"
 
 
 class Database:
-    def __init__(self, db_path: str = DB_PATH, query_file: str = QUERY_FILE) -> None:
+    def __init__(
+        self,
+        db_path: str = DB_PATH,
+        query_file: str = QUERY_FILE,
+    ) -> None:
         self.db_path = db_path
         self.query_file = query_file
         self.queries = self._load_queries()
@@ -53,7 +57,7 @@ class Database:
 
     def remove_person(self, id: int) -> None:
         with self.get_connection() as conn:
-            cursor = conn.execute(
+            conn.execute(
                 self.queries["remove_person"],
                 {
                     "id": id,

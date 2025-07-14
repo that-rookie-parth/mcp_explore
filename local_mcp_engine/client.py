@@ -1,7 +1,5 @@
 import asyncio
-from typing import Any
 
-from authlib.jose.rfc7518.jws_algs import NoneAlgorithm
 from fastmcp import Client
 
 client = Client("http://localhost:8000/mcp")
@@ -15,7 +13,10 @@ async def greet(name: str) -> None:
                 "name": name,
             },
         )
-        print("Server Responded:", (result.structured_content or {}).get("result"))
+        print(
+            "Server Responded:",
+            (result.structured_content or {}).get("result"),
+        )
 
 
 async def add_person(name: str, age: int, profession: str) -> None:
@@ -28,7 +29,10 @@ async def add_person(name: str, age: int, profession: str) -> None:
                 "profession": profession,
             },
         )
-        print("Server Responded:", (result.structured_content or {}).get("result"))
+        print(
+            "Server Responded:",
+            (result.structured_content or {}).get("result"),
+        )
 
 
 async def list_people() -> None:
