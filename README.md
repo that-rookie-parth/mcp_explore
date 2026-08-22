@@ -62,7 +62,7 @@ flowchart LR
 The server exposes four tools: `greet`, `add_person`, `list_people`, and `remove_person`.
 
 ```bash
-git clone https://github.com/that-rookie-parth/mcp_explore.git
+git clone https://github.com/parthkulshreshtha/mcp_explore.git
 cd mcp_explore/local_mcp_engine
 uv sync --frozen
 uv run uvicorn server:app --reload --no-access-log

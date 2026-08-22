@@ -21,7 +21,7 @@ To run this project, you will need to add the following environment variables to
 Clone the project
 
 ```bash
-  git clone https://github.com/that-rookie-parth/mcp_explore.git
+  git clone https://github.com/parthkulshreshtha/mcp_explore.git
 ```
 
 Go to the project directory
@@ -62,4 +62,4 @@ Follow [these instructions](https://github.com/ollama/ollama?tab=readme-ov-file#
 
 ## Authors
 
-- [@Parth Kulshreshtha](https://github.com/that-rookie-parth)
+- [@Parth Kulshreshtha](https://github.com/parthkulshreshtha)
